@@ -1,0 +1,9 @@
+VirtConsole installation instructions.
+
+Ensure Ruby is installed
+
+  gem install virtconsole
+  
+The gem has dependencies for nokogiri and serialport
+
+https://rubygems.org/gems/virtconsole

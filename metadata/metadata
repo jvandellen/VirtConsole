@@ -1,0 +1,106 @@
+--- !ruby/object:Gem::Specification 
+name: virtconsole
+version: !ruby/object:Gem::Version 
+  hash: 31
+  prerelease: false
+  segments: 
+  - 1
+  - 0
+  - 4
+  version: 1.0.4
+platform: ruby
+authors: 
+- Branden Coates
+- Eugene Howe
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2012-01-18 00:00:00 +00:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: nokogiri
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :runtime
+  version_requirements: *id001
+- !ruby/object:Gem::Dependency 
+  name: serialport
+  prerelease: false
+  requirement: &id002 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :runtime
+  version_requirements: *id002
+description: |-
+  Provides a means to pass commands via script into the LibVirt console of an instance.
+  Designed specifically for use with the COMRedirSVC project.
+  (https://github.com/GearheadRed/COMRedirSVC)
+email: 
+- branden.c.coates@gmail.com
+- eugene@xtreme-computers.net
+executables: 
+- virtconsole
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- bin/virtconsole
+- lib/virt_console.rb
+- lib/version.rb
+has_rdoc: true
+homepage: https://github.com/GearheadRed/VirtConsole
+licenses: []
+
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 57
+      segments: 
+      - 1
+      - 8
+      - 7
+      version: 1.8.7
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 21
+      segments: 
+      - 1
+      - 3
+      - 7
+      version: 1.3.7
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 3
+summary: LibVirt console scriptable command executor in Ruby
+test_files: []
+

@@ -1,0 +1,24 @@
+Copyright 2011 Branden Coates
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+VirtConsole Beta V1.0.4
+
+VirtConsole was built with the intention of bridging the gap between Linux virtualization systems and Windows server instances running on those Linux based parents. The gem essentially allows you to access a command prompt of the instance by utilizing a serial console connection from the parent and its sister service COMRedirSVC running the Windows server instance COM1 port inside the instance. This can serve basic functions such as passing a shutdown command into the instance all the way up to utilizing native Windows 2008 and Windows 7 features such as adding or removing IPs. The program will send any input into the instance for execution at the windows command prompt and return any command prompt output back through the serial connection to the hosting virtualization parent. Since VirtConsole utilizes a serial connection there is little security concern over authentication taking place when the console is opened from the parent as this would mean the parent has been compromised and a larger issue than the service its self. There is no way to access the serial connection to the Windows instance unless you have either logged into the parent first, or redirected COM access through the parent. I would heavily suggest against doing the latter as it would essentially leave the instance command prompt open to the world depending on what manner of redirection you utilized.
+
+The gem is available at https://rubygems.org/gems/virtconsole and by running gem install virtconsole
+The sister service COMRedirSvc is downloadable at https://github.com/GearheadRed/COMRedirSVC
+
+You can download the entire source code for the project and modify it according to your needs for use with your environment/product. It is licensed under the Apache V2 license which does not require you to contribute or release any modified sources of the project, however any contributions would be gladly accepted provided they serve a useful purpose.
+
+I develop this application in my free time and will respond back as soon as possible during my non-working hours.

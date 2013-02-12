@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'nokogiri'
+lib = File.expand_path('../lib', __FILE__)
+$:.unshift lib unless $:.include?(lib)
+require 'virt_console' unless defined?(VirtConsole)
+variable_hash = {}
+# quit unless our script gets two command line arguments
+unless ARGV.length == 2
+  puts 'Incorrect usage.'
+  puts 'Usage: virtconsole instance-name "command line to be executed(must be in quotes)"'
+  exit
+end
+# instance name should be the first command line arg
+variable_hash[:instancename] = ARGV[0]
+# the command(in quotes) should be the second command line arg
+variable_hash[:command] = ARGV[1]
+# use Nokogiri to gather the proper serial path
+output = IO.popen("virsh dumpxml #{variable_hash[:instancename]}")
+xml = Nokogiri::XML(output)
+variable_hash[:path] = xml.xpath("/domain/devices/serial/source/@path")
+# call the class and pass our variable data for execution
+virt = VirtConsole.new(variable_hash)
+virt.execute
