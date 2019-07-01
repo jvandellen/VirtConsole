@@ -7,11 +7,12 @@ version: !ruby/object:Gem::Version
   - 1
   - 0
   - 4
-  version: 1.0.4
+  version: 1.0.5
 platform: ruby
 authors: 
 - Branden Coates
 - Eugene Howe
+- Jeff VanDellen
 autorequire: 
 bindir: bin
 cert_chain: []
@@ -49,11 +50,10 @@ dependencies:
   version_requirements: *id002
 description: |-
   Provides a means to pass commands via script into the LibVirt console of an instance.
-  Designed specifically for use with the COMRedirSVC project.
+  Originall Designed specifically for use with the COMRedirSVC project. 
   (https://github.com/GearheadRed/COMRedirSVC)
 email: 
-- branden.c.coates@gmail.com
-- eugene@xtreme-computers.net
+- jvandellen@gmail.com
 executables: 
 - virtconsole
 extensions: []
@@ -65,7 +65,7 @@ files:
 - lib/virt_console.rb
 - lib/version.rb
 has_rdoc: true
-homepage: https://github.com/GearheadRed/VirtConsole
+homepage: https://github.com/jvandellen/VirtConsole
 licenses: []
 
 post_install_message: 
