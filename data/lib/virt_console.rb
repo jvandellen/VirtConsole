@@ -12,7 +12,7 @@ class VirtConsole
       Thread.new {
         tty.write @command + "\015"
       }
-      until line =~ /^(Execution Completed|Ready|Disk Shrink Completed|Disk Extend Completed)\.$/ do
+      until line =~ /^(Execution Completed)/ do
         line = (tty.readline.chomp!)
         print "#{line}\n"
       end
